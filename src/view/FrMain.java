@@ -28,12 +28,14 @@ public class FrMain extends javax.swing.JFrame {
         this.setTitle("Student Tracking");
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
         lbLogo.setIcon(new ImageIcon(getClass().getResource(ImageUtils.BKCIT_lOGO)));
-        Navigator navigator= new Navigator(pnMenu);
+        Navigator navigator= new Navigator(pnMain);
         navigator.setStartPage();
         List<MenuDto> menus= new ArrayList<>();
         menus.add(new MenuDto(MenuEnum.HOMEPAGE, pnHomepage, lbHomePage));
         menus.add(new MenuDto(MenuEnum.COURSE_MANAGER, pnCourseMan, lbCourseMan));
         menus.add(new MenuDto(MenuEnum.STUDENT_MANAGER, pnStudentMan, lbStudentMan));
+        menus.add(new MenuDto(MenuEnum.CLASS_MANAGER, pnClassMan, lbClassMan));
+        menus.add(new MenuDto(MenuEnum.STATISTICAL_MANAGER, pnStatiscticalMan, lbStatisticalMan));
         navigator.setEvent(menus);
     }
 
@@ -54,15 +56,15 @@ public class FrMain extends javax.swing.JFrame {
         lbStudentMan = new javax.swing.JLabel();
         pnCourseMan = new javax.swing.JPanel();
         lbCourseMan = new javax.swing.JLabel();
-        pnClass = new javax.swing.JPanel();
-        lbClass = new javax.swing.JLabel();
-        pnCourseMan2 = new javax.swing.JPanel();
-        lbCourseMan2 = new javax.swing.JLabel();
+        pnClassMan = new javax.swing.JPanel();
+        lbClassMan = new javax.swing.JLabel();
+        pnStatiscticalMan = new javax.swing.JPanel();
+        lbStatisticalMan = new javax.swing.JLabel();
         pnApp = new javax.swing.JPanel();
         lbApp = new javax.swing.JLabel();
         pnLogo = new javax.swing.JPanel();
         lbLogo = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
+        pnMain = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -71,7 +73,7 @@ public class FrMain extends javax.swing.JFrame {
 
         pnMenu.setBackground(new java.awt.Color(0, 0, 0));
         pnMenu.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 12, 1, 12));
-        pnMenu.setLayout(new java.awt.GridLayout(8, 0, 0, 10));
+        pnMenu.setLayout(new java.awt.GridLayout(5, 0, 0, 10));
 
         pnHomepage.setBackground(new java.awt.Color(96, 100, 191));
         pnHomepage.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
@@ -106,27 +108,27 @@ public class FrMain extends javax.swing.JFrame {
 
         pnMenu.add(pnCourseMan);
 
-        pnClass.setBackground(new java.awt.Color(51, 255, 51));
-        pnClass.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+        pnClassMan.setBackground(new java.awt.Color(51, 255, 51));
+        pnClassMan.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
 
-        lbClass.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lbClass.setForeground(new java.awt.Color(255, 255, 255));
-        lbClass.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icon_menu3_white_24dp.png"))); // NOI18N
-        lbClass.setText("Quản Lý Lớp Học");
-        pnClass.add(lbClass);
+        lbClassMan.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lbClassMan.setForeground(new java.awt.Color(255, 255, 255));
+        lbClassMan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icon_menu3_white_24dp.png"))); // NOI18N
+        lbClassMan.setText("Quản Lý Lớp Học");
+        pnClassMan.add(lbClassMan);
 
-        pnMenu.add(pnClass);
+        pnMenu.add(pnClassMan);
 
-        pnCourseMan2.setBackground(new java.awt.Color(51, 255, 51));
-        pnCourseMan2.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+        pnStatiscticalMan.setBackground(new java.awt.Color(51, 255, 51));
+        pnStatiscticalMan.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
 
-        lbCourseMan2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lbCourseMan2.setForeground(new java.awt.Color(255, 255, 255));
-        lbCourseMan2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icon_menu4_white_24dp.png"))); // NOI18N
-        lbCourseMan2.setText("Thống kê dữ liệu");
-        pnCourseMan2.add(lbCourseMan2);
+        lbStatisticalMan.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lbStatisticalMan.setForeground(new java.awt.Color(255, 255, 255));
+        lbStatisticalMan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icon_menu4_white_24dp.png"))); // NOI18N
+        lbStatisticalMan.setText("Thống kê dữ liệu");
+        pnStatiscticalMan.add(lbStatisticalMan);
 
-        pnMenu.add(pnCourseMan2);
+        pnMenu.add(pnStatiscticalMan);
 
         pnLeft.add(pnMenu, java.awt.BorderLayout.CENTER);
 
@@ -149,18 +151,18 @@ public class FrMain extends javax.swing.JFrame {
 
         getContentPane().add(pnLeft, java.awt.BorderLayout.LINE_START);
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout pnMainLayout = new javax.swing.GroupLayout(pnMain);
+        pnMain.setLayout(pnMainLayout);
+        pnMainLayout.setHorizontalGroup(
+            pnMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 560, Short.MAX_VALUE)
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        pnMainLayout.setVerticalGroup(
+            pnMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 752, Short.MAX_VALUE)
         );
 
-        getContentPane().add(jPanel2, java.awt.BorderLayout.CENTER);
+        getContentPane().add(pnMain, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -201,22 +203,22 @@ public class FrMain extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel lbApp;
-    private javax.swing.JLabel lbClass;
+    private javax.swing.JLabel lbClassMan;
     private javax.swing.JLabel lbCourseMan;
-    private javax.swing.JLabel lbCourseMan2;
     private javax.swing.JLabel lbHomePage;
     private javax.swing.JLabel lbLogo;
+    private javax.swing.JLabel lbStatisticalMan;
     private javax.swing.JLabel lbStudentMan;
     private javax.swing.JPanel pnApp;
-    private javax.swing.JPanel pnClass;
+    private javax.swing.JPanel pnClassMan;
     private javax.swing.JPanel pnCourseMan;
-    private javax.swing.JPanel pnCourseMan2;
     private javax.swing.JPanel pnHomepage;
     private javax.swing.JPanel pnLeft;
     private javax.swing.JPanel pnLogo;
+    private javax.swing.JPanel pnMain;
     private javax.swing.JPanel pnMenu;
+    private javax.swing.JPanel pnStatiscticalMan;
     private javax.swing.JPanel pnStudentMan;
     // End of variables declaration//GEN-END:variables
 }

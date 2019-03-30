@@ -12,5 +12,7 @@ package common;
 public enum MenuEnum {
     HOMEPAGE,
     STUDENT_MANAGER,
-    COURSE_MANAGER   
+    COURSE_MANAGER,
+    CLASS_MANAGER,
+    STATISTICAL_MANAGER
 }
