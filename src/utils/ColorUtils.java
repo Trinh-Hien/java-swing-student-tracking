@@ -12,7 +12,7 @@ import java.awt.Color;
  * @author PC
  */
 public class ColorUtils {
-    public static final Color NORMAL_MENU= new Color(0, 255, 51);
+    public static final Color NORMAL_MENU= new Color(76, 175, 80);
     public static final Color HOVER_MENU= new Color(96, 100, 191);
     
 }

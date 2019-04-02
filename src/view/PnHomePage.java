@@ -27,31 +27,147 @@ public class PnHomePage extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        pnCourseHint = new javax.swing.JPanel();
+        lbCourseInfo = new javax.swing.JLabel();
+        lbCourseIcon = new javax.swing.JLabel();
+        lbCourseQty = new javax.swing.JLabel();
+        pnStudentHint = new javax.swing.JPanel();
+        lbStudentInfo = new javax.swing.JLabel();
+        lbStudentIcon = new javax.swing.JLabel();
+        lbStudentQty = new javax.swing.JLabel();
+        pnMailBoxHint = new javax.swing.JPanel();
+        lbMailBoxInfo = new javax.swing.JLabel();
+        lbMailBoxIcon = new javax.swing.JLabel();
+        lbMailBoxQty = new javax.swing.JLabel();
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel1.setText("HOME PAGE");
+        setBackground(new java.awt.Color(204, 204, 255));
+        setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 30, 30));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(151, 151, 151)
-                .addComponent(jLabel1)
-                .addContainerGap(141, Short.MAX_VALUE))
+        pnCourseHint.setBackground(new java.awt.Color(255, 0, 0));
+
+        lbCourseInfo.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        lbCourseInfo.setText("Khóa Học");
+
+        lbCourseIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icon_trangchu1_white_24dp.png"))); // NOI18N
+
+        lbCourseQty.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        lbCourseQty.setText("100");
+
+        javax.swing.GroupLayout pnCourseHintLayout = new javax.swing.GroupLayout(pnCourseHint);
+        pnCourseHint.setLayout(pnCourseHintLayout);
+        pnCourseHintLayout.setHorizontalGroup(
+            pnCourseHintLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnCourseHintLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lbCourseIcon)
+                .addGap(34, 34, 34)
+                .addGroup(pnCourseHintLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(lbCourseQty)
+                    .addComponent(lbCourseInfo))
+                .addContainerGap(33, Short.MAX_VALUE))
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(82, 82, 82)
-                .addComponent(jLabel1)
-                .addContainerGap(196, Short.MAX_VALUE))
+        pnCourseHintLayout.setVerticalGroup(
+            pnCourseHintLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnCourseHintLayout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addComponent(lbCourseQty)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(pnCourseHintLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lbCourseIcon)
+                    .addComponent(lbCourseInfo))
+                .addGap(29, 29, 29))
         );
+
+        add(pnCourseHint);
+
+        pnStudentHint.setBackground(new java.awt.Color(153, 255, 255));
+
+        lbStudentInfo.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        lbStudentInfo.setText("Học Viên");
+
+        lbStudentIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icon_trangchu2_white_24dp.png"))); // NOI18N
+
+        lbStudentQty.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        lbStudentQty.setText("100");
+
+        javax.swing.GroupLayout pnStudentHintLayout = new javax.swing.GroupLayout(pnStudentHint);
+        pnStudentHint.setLayout(pnStudentHintLayout);
+        pnStudentHintLayout.setHorizontalGroup(
+            pnStudentHintLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnStudentHintLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lbStudentIcon)
+                .addGap(34, 34, 34)
+                .addGroup(pnStudentHintLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(lbStudentQty)
+                    .addComponent(lbStudentInfo))
+                .addContainerGap(33, Short.MAX_VALUE))
+        );
+        pnStudentHintLayout.setVerticalGroup(
+            pnStudentHintLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnStudentHintLayout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addComponent(lbStudentQty)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(pnStudentHintLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lbStudentIcon)
+                    .addComponent(lbStudentInfo))
+                .addGap(29, 29, 29))
+        );
+
+        add(pnStudentHint);
+
+        pnMailBoxHint.setBackground(new java.awt.Color(255, 51, 255));
+
+        lbMailBoxInfo.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        lbMailBoxInfo.setText("Hộp Thư");
+
+        lbMailBoxIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icon_trangchu3_white_24dp.png"))); // NOI18N
+
+        lbMailBoxQty.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        lbMailBoxQty.setText("100");
+
+        javax.swing.GroupLayout pnMailBoxHintLayout = new javax.swing.GroupLayout(pnMailBoxHint);
+        pnMailBoxHint.setLayout(pnMailBoxHintLayout);
+        pnMailBoxHintLayout.setHorizontalGroup(
+            pnMailBoxHintLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnMailBoxHintLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lbMailBoxIcon)
+                .addGap(34, 34, 34)
+                .addGroup(pnMailBoxHintLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(lbMailBoxQty)
+                    .addComponent(lbMailBoxInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(33, Short.MAX_VALUE))
+        );
+        pnMailBoxHintLayout.setVerticalGroup(
+            pnMailBoxHintLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnMailBoxHintLayout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addComponent(lbMailBoxQty)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(pnMailBoxHintLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lbMailBoxIcon)
+                    .addComponent(lbMailBoxInfo))
+                .addGap(29, 29, 29))
+        );
+
+        add(pnMailBoxHint);
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel lbCourseIcon;
+    private javax.swing.JLabel lbCourseInfo;
+    private javax.swing.JLabel lbCourseQty;
+    private javax.swing.JLabel lbMailBoxIcon;
+    private javax.swing.JLabel lbMailBoxInfo;
+    private javax.swing.JLabel lbMailBoxQty;
+    private javax.swing.JLabel lbStudentIcon;
+    private javax.swing.JLabel lbStudentInfo;
+    private javax.swing.JLabel lbStudentQty;
+    private javax.swing.JPanel pnCourseHint;
+    private javax.swing.JPanel pnMailBoxHint;
+    private javax.swing.JPanel pnStudentHint;
     // End of variables declaration//GEN-END:variables
 }

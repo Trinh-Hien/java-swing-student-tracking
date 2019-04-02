@@ -69,11 +69,10 @@ public class FrMain extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         pnLeft.setBackground(new java.awt.Color(0, 0, 0));
-        pnLeft.setLayout(new java.awt.BorderLayout());
 
         pnMenu.setBackground(new java.awt.Color(0, 0, 0));
         pnMenu.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 12, 1, 12));
-        pnMenu.setLayout(new java.awt.GridLayout(5, 0, 0, 10));
+        pnMenu.setLayout(new java.awt.GridLayout(5, 0, 10, 30));
 
         pnHomepage.setBackground(new java.awt.Color(96, 100, 191));
         pnHomepage.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
@@ -86,7 +85,7 @@ public class FrMain extends javax.swing.JFrame {
 
         pnMenu.add(pnHomepage);
 
-        pnStudentMan.setBackground(new java.awt.Color(0, 255, 51));
+        pnStudentMan.setBackground(new java.awt.Color(76, 175, 80));
         pnStudentMan.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
 
         lbStudentMan.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -97,7 +96,7 @@ public class FrMain extends javax.swing.JFrame {
 
         pnMenu.add(pnStudentMan);
 
-        pnCourseMan.setBackground(new java.awt.Color(51, 255, 51));
+        pnCourseMan.setBackground(new java.awt.Color(76, 175, 80));
         pnCourseMan.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
 
         lbCourseMan.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -108,7 +107,7 @@ public class FrMain extends javax.swing.JFrame {
 
         pnMenu.add(pnCourseMan);
 
-        pnClassMan.setBackground(new java.awt.Color(51, 255, 51));
+        pnClassMan.setBackground(new java.awt.Color(76, 175, 80));
         pnClassMan.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
 
         lbClassMan.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -119,7 +118,7 @@ public class FrMain extends javax.swing.JFrame {
 
         pnMenu.add(pnClassMan);
 
-        pnStatiscticalMan.setBackground(new java.awt.Color(51, 255, 51));
+        pnStatiscticalMan.setBackground(new java.awt.Color(76, 175, 80));
         pnStatiscticalMan.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
 
         lbStatisticalMan.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -129,8 +128,6 @@ public class FrMain extends javax.swing.JFrame {
         pnStatiscticalMan.add(lbStatisticalMan);
 
         pnMenu.add(pnStatiscticalMan);
-
-        pnLeft.add(pnMenu, java.awt.BorderLayout.CENTER);
 
         pnApp.setBackground(new java.awt.Color(255, 0, 0));
         pnApp.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.TRAILING, 20, 10));
@@ -142,12 +139,26 @@ public class FrMain extends javax.swing.JFrame {
         lbApp.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 10));
         pnApp.add(lbApp);
 
-        pnLeft.add(pnApp, java.awt.BorderLayout.PAGE_START);
-
         pnLogo.setBackground(new java.awt.Color(0, 0, 0));
         pnLogo.add(lbLogo);
 
-        pnLeft.add(pnLogo, java.awt.BorderLayout.PAGE_END);
+        javax.swing.GroupLayout pnLeftLayout = new javax.swing.GroupLayout(pnLeft);
+        pnLeft.setLayout(pnLeftLayout);
+        pnLeftLayout.setHorizontalGroup(
+            pnLeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(pnApp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(pnMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(pnLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        pnLeftLayout.setVerticalGroup(
+            pnLeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnLeftLayout.createSequentialGroup()
+                .addComponent(pnApp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(pnMenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(pnLogo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
 
         getContentPane().add(pnLeft, java.awt.BorderLayout.LINE_START);
 
@@ -159,7 +170,7 @@ public class FrMain extends javax.swing.JFrame {
         );
         pnMainLayout.setVerticalGroup(
             pnMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 752, Short.MAX_VALUE)
+            .addGap(0, 756, Short.MAX_VALUE)
         );
 
         getContentPane().add(pnMain, java.awt.BorderLayout.CENTER);
